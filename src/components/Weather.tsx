@@ -1,6 +1,7 @@
 // Class Component
 
 import React from 'react';
+import Display from './Display';
 
 type Data = {
     lat: number;
@@ -52,12 +53,7 @@ export default class Weather extends React.Component<AcceptedProps, Data> {
     render(){
         return(
             <div>
-                <p>Latitude: {this.state.lat}</p>
-                <p>Longitude: {this.state.lon}</p>
-                <p>Description: {this.state.desc}</p>
-                <p>Temperature: {this.state.temp} K</p>
-                <p>Humidity: {this.state.humid}</p>
-                <p>Feels Like: {this.state.feel} K</p>
+                <Display obj={this.state}/>
             </div>
         )
     }
